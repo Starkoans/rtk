@@ -1,22 +1,29 @@
 import styles from './item.module.css'
-import {useDispatch, useSelector} from "react-redux";
-import {addItem} from "../store/items/item.slice.js";
+import {useRemoveItemMutation} from "../store/api/api.js";
 
 function Item({item}) {
 
-    const items = useSelector((state) => state.items)
-    console.log(items)
+    // const items = useSelector((state) => state.items)
+    // console.log(items)
+    //
+    //
+    // const dispatch = useDispatch()
+    // const handleClick = () =>{
+    //
+    //     dispatch(addItem(item))
+    // }
 
-    const dispatch = useDispatch()
-    const handleClick = () =>{
-        dispatch(addItem(item))
+    const [removeItem, {isLoading, error}] = useRemoveItemMutation();
+
+    const handleDelete = ()=>{
+        console.log(item.id);
+        removeItem(item.id).unwrap();
     }
-
     return(
         <div className={styles.Item}>
         <h3>{item.name}</h3>
             <div>{item.description}</div>
-            <button onClick={handleClick}>Add item</button>
+            <button onClick={handleDelete}>Remove item</button>
         </div>
         )
 

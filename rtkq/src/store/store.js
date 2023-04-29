@@ -1,13 +1,17 @@
-import {combineReducers, configureStore} from "@reduxjs/toolkit";
+import { configureStore} from "@reduxjs/toolkit";
 import itemReducer from "./items/item.slice.js";
-
-const rootReducer = combineReducers({
-    items: itemReducer,
-})
+import {itemApi} from "./api/api.js";
+import {setupListeners} from "@reduxjs/toolkit/query";
 
 
 export const store = configureStore({
-    reducer: rootReducer,
+    reducer: {
+        [itemApi.reducerPath] : itemApi.reducer,
+        items: itemReducer
+    },
     // devTools: true,
     // preloadedState
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(itemApi.middleware)
 })
+setupListeners(store.dispatch);

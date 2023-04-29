@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Capybara",
+      "description": "Coconut dog."
+    },
+    {
+      "id": 2,
+      "name": "Penguin",
+      "description": "Arctic bird."
+    },
+    {
+      "id": 3,
+      "name": "Cat",
+      "description": "Purr purr meow meow."
+    },
+    {
+      "id": 4,
+      "name": "Frog",
+      "description": "It's Wednesday, my dudes."
+    },
+    {
+      "name": "Собака",
+      "description": "Гавкает",
+      "id": 5
+    }
+  ]
+}
