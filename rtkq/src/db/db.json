@@ -17,13 +17,13 @@
     },
     {
       "id": 4,
-      "name": "Frog",
+      "name": "Forg",
       "description": "It's Wednesday, my dudes."
     },
     {
-      "name": "Собака",
-      "description": "Гавкает",
-      "id": 5
+      "name": "Li",
+      "description": "A big cat.",
+      "id": 7
     }
   ]
 }
