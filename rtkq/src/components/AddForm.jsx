@@ -4,7 +4,7 @@ import {useState} from "react";
 function AddForm(){
 
     //добавление (подключаем хук мутации)
-    const [addItem, {isError}] = useAddItemMutation();
+    const [addItem,] = useAddItemMutation();
     //состояние для объекта для формы
     const [newItem, setNewItem] = useState({
         // name: '',

@@ -1,0 +1,11 @@
+.header{
+    padding: 5%;
+    background: #1a1a1a;
+    width: 100vh;
+}
+.header>a{
+    padding: 5%;
+}
+.header>a:hover{
+    text-decoration: underline;
+}
